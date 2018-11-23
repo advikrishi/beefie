@@ -12,7 +12,7 @@ async def on_message(message):
 		msg = 'Hello {0.author.mention}'.format(message)
 		await client.send_message(message.channel, msg)
 	elif message.content.startswith('!qna'):
-		await client.send_message(message.channel, 'Oh wow')
+		await client.send_message(message.channel, "Oh wow")
 
 @client.event
 async def on_ready():
