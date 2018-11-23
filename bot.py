@@ -11,14 +11,12 @@ async def on_message(message):
 	if message.content.startswith('!hello'):
 		msg = 'Hello {0.author.mention}'.format(message)
 		await client.send_message(message.channel, msg)
-	elif message.content.startswith('!qna'):
-		await client.send_message(message.channel, "Oh wow")
 
 @client.event
 async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
+	print('Logged in as')
+	print(client.user.name)
+	print(client.user.id)
+	print('------')
 
 client.run('NTEzMjY3MzI2NjgzMDU0MDgw.DtFkSg.zViv3wrEX-ijAYys4--al7qGb34')
