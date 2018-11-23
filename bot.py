@@ -14,7 +14,7 @@ async def on_message(message):
 		msg = 'Hello {0.author.mention}'.format(message)
 		await client.send_message(message.channel, msg)
 		
-	elif message.conent.startswith('!qna'):
+	elif message.content.startswith('!qna'):
 		msg = 'This is one hell of a qna'.format(message)
 		await client.send_message(message.channel, msg)
 
