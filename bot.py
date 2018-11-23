@@ -1,14 +1,16 @@
 import discord
-#import asyncio
+
+TOKEN = 'NTEzMjY3MzI2NjgzMDU0MDgw.DtFkSg.zViv3wrEX-ijAYys4--al7qGb34'
+
 client = discord.Client()
 
 @client.event
 async def on_message(message):
-    # we do not want the bot to reply to itself
+	# we do not want the bot to reply to itself
 	if message.author == client.user:
 		return
-	
-	elif message.content.startswith('!hello'):
+
+	if message.content.startswith('!hello'):
 		msg = 'Hello {0.author.mention}'.format(message)
 		await client.send_message(message.channel, msg)
 
@@ -19,4 +21,4 @@ async def on_ready():
 	print(client.user.id)
 	print('------')
 
-client.run('NTEzMjY3MzI2NjgzMDU0MDgw.DtFkSg.zViv3wrEX-ijAYys4--al7qGb34')
+client.run('TOKEN')
